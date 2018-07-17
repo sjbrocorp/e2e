@@ -1,0 +1,35 @@
+{
+  "output": "./output",
+  "helpers": {
+    "Nightmare": {
+      "url": "http://server:80",
+      "show": true,
+      "restart": false
+    },
+    "REST": {
+      "endpoint": "http://server:80/api"
+    },
+    "ApiDataFactory": {
+      "endpoint": "http://server:80/api",
+      "cleanup": true,
+      "factories": {
+        "ticket": {
+          "factory": "/usr/src/e2e/tests/factories/ticket.js",
+          "uri": "/tickets"
+        }
+      }
+    },
+    "SamJBro": {
+      "require": "./tests/helpers/samjbro_helper.js"
+    }
+  },
+  "include": {},
+  "mocha": {},
+  "bootstrap": "./tests/bootstrap.js",
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "tests": "./tests/**/*_test.js",
+  "timeout": 10000,
+  "name": "e2e"
+}
