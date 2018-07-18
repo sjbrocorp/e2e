@@ -47,6 +47,9 @@ services:
     networks:
     - default-net
   e2e:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: "${REGISTRY}/${E2E_NAME}"
     volumes:
 #    - "${PATH_TO_E2E}:/usr/src/e2e"
