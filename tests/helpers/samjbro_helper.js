@@ -29,7 +29,6 @@ class SamJBro extends Helper {
         return err.message.indexOf('Docker not ready') > -1
       }
     })
-
     this.amPreparingDatabase()
 
   }
@@ -69,6 +68,8 @@ class SamJBro extends Helper {
       if (response.error) {
         throw new Error('Docker not ready')
       }
+    }).catch(error => {
+      console.log({ error })
     })
   }
 
