@@ -16,6 +16,7 @@ Scenario('a user can create a ticket', async (I) => {
   I.waitForVisible('.tickets', 20)
   I.dontSeeElement('.create-ticket')
   I.click('New Ticket')
+  I.waitForVisible('.create-ticket', 20)
   within('.create-ticket', () => {
     I.fillField('email', blob.email)
     I.fillField('name', blob.name)
@@ -24,7 +25,7 @@ Scenario('a user can create a ticket', async (I) => {
     I.fillField('extension', blob.extension)
     I.fillField('description', blob.description)
   })
-  I.click('Submit Ticket')
+  I.click('Submit')
   I.waitForInvisible('.create-ticket')
   I.seeInCurrentUrl('/#!/tickets')
   I.see(blob.email)

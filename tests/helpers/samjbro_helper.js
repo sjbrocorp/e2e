@@ -21,6 +21,7 @@ class SamJBro extends Helper {
         return resp.body;
       });
     }
+
     const recorder = require('codeceptjs').recorder
     recorder.retry({
       retries: 40,

@@ -14,6 +14,6 @@ Scenario('a user can log in using the login page', (I) => {
   I.fillField('email', 'test@admin.com')
   I.fillField('password', 'secret')
   I.click('Login')
-  I.waitForVisible('.app__main', 5)
+  I.waitForVisible('.app__main', 20)
   I.dontSeeElement('.app__login')
 })
