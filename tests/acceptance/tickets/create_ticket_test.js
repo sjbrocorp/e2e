@@ -1,5 +1,5 @@
 Feature('Create Ticket Test @acceptance')
-const blob = require('../blobs/ticket')
+const blob = require('../../blobs/ticket')
 
 Before(async (I) => {
   const token = await I.signIn()
@@ -24,8 +24,9 @@ Scenario('a user can create a ticket', async (I) => {
     I.fillField('telephone', blob.telephone)
     I.fillField('extension', blob.extension)
     I.fillField('description', blob.description)
+    I.fillField('source', blob.source)
   })
-  I.click('Submit')
+  I.click('Create Ticket')
   I.waitForInvisible('.create-ticket')
   I.seeInCurrentUrl('/#!/tickets')
   I.see(blob.email)

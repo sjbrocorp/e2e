@@ -17,7 +17,7 @@ Scenario('a user can set the status on a ticket', async (I) => {
   I.amOnPage(`#!/tickets/${ticket.id}/edit`)
   I.waitForVisible('.edit-ticket', 20)
   I.selectOption('Status', status)
-  I.click('Update')
+  I.click('Update Ticket')
   I.waitForInvisible('.edit-ticket', 20)
   I.seeInCurrentUrl('/#!/tickets')
   I.see(status)
