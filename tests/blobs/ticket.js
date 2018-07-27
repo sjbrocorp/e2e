@@ -5,5 +5,6 @@ module.exports = {
   telephone: '01234567890',
   extension: '+00',
   description: 'This is a test ticket.',
-  source: 'Email'
+  source: 'Email',
+  productType: 'Box Cable'
 }

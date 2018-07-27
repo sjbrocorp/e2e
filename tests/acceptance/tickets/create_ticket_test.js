@@ -25,6 +25,7 @@ Scenario('a user can create a ticket', async (I) => {
     I.fillField('extension', blob.extension)
     I.fillField('description', blob.description)
     I.fillField('source', blob.source)
+    I.fillField('productType', blob.productType)
   })
   I.click('Create Ticket')
   I.waitForInvisible('.create-ticket')

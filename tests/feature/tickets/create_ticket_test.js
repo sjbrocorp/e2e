@@ -13,5 +13,6 @@ Scenario('a signed in user can create a ticket', async (I) => {
   expect(ticket.description).toEqual(blob.description)
   expect(ticket.status).toEqual('Pending')
   expect(ticket.source).toEqual(blob.source)
+  expect(ticket.productType).toEqual(blob.productType)
   I.signOut()
 })
