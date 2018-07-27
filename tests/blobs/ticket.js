@@ -6,5 +6,6 @@ module.exports = {
   extension: '+00',
   description: 'This is a test ticket.',
   source: 'Email',
-  productType: 'Box Cable'
+  productType: 'Box Cable',
+  problemType: 'Admin Error'
 }
